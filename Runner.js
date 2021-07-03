@@ -7,7 +7,6 @@ let nEquation;
 let n1Equation;
 let derivative;
 const allConstants = ["a","b", "c", "d", "f", "g"];
-let mymath;
 
 const keyValue = (input) => Object.entries(input).forEach(([key,value]) => {
     println(key +" = "+ value);
@@ -60,35 +59,8 @@ function Solve(start, end, steps, Precision, values, eq, iAnswer, step)
     println("<hr>");
 }
 
-function equationSolve(x)
-{
-    return math.evaluate(equation, {x}).toFixed(fixedLength);  
-}
-
-function getDerivaite()
-{
-    return math.simplify(math.derivative(equation, "x")).toString();
-}
-
-function equationDerivativeSolve(x)
-{
-    return math.evaluate(derivative, {x}).toFixed(fixedLength);  
-}
-
 function clearOutput()
 {
     document.getElementById("Output").innerHTML="";
-}
-
-function rootResultChecker(value)
-{
-    //console.log("before ->" + value);
-    value = value.toString().slice(0, value.toString().length - (fixedLength - toCheckLength));
-    //console.log("after ->" + value);
-    value = parseFloat(value);
-
-    if(!(value < 0 || value > 0))
-        return true;
-    return false;
 }
 
