@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Improved Eular</title>
+    <script src="math.js"></script>
+    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="block" style="text-align: center;">
+        <h1>Improved Eular</h1>
+        by Arose Niazi
+    </div>
+    <div class="block">
+        <form autocomplete="on">
+            <table width="100%">
+                <tr>
+                    <th colspan="3"><label for="Equation">Equation</label></th>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="text" name="Equation" id="Equation" placeholder="Enter Equation here use x and y for variables" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="Precision">Precision</label></th>
+                    <th><label for="values">Values</label></th>
+                </tr>
+                <tr>
+                    <td><input type="number" maxlength="1" name="Precision" id="Precision" placeholder="Enter Precision here" value="5" required/>
+                    </td>
+                    <td><input type="text" name="values" id="values" placeholder="Enter values" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="start">Start Limit</label></th>
+                    <th><label for="end">End Limit</label></th>
+                </tr>
+                <tr>
+                    <td><input type="number" maxlength="16" name="start" id="start" placeholder="Enter starting limit here" autocomplete="on" required/>
+                    </td>
+                    <td><input type="number" maxlength="16" name="end" id="end" placeholder="Enter ending limit here" autocomplete="on" required/>
+                    </td>
+                </tr>
+                <tr>
+                    <th><label for="iAnswer">Inital Answer</label></th>
+                    <th><label for="hValue">Step (H)</label></th>
+                </tr>
+                <tr>
+                    <td><input type="number" maxlength="16" name="iAnswer" id="iAnswer" placeholder="Enter inital answer" autocomplete="on" required/>
+                    </td>
+                    <td><input type="number" maxlength="16" name="hValue" id="hValue" placeholder="Enter value of h" autocomplete="on" required/>
+                    </td>
+                </tr>
+            </table>
+            <label for="steps">Steps to Show</label>
+            <td><input type="number" maxlength="16" name="steps" id="steps" placeholder="Enter number of steps to show; 0 for all" autocomplete="on" value="2" required/>
+            </td>
+
+            <input type="button" value="Calculate" onclick="Solve(start, end , steps, Precision, values, Equation, iAnswer, hValue)" />
+            <input type="button" value="Clear output" onclick="clearOutput()" />
+        </form>
+    </div>
+    <br>
+    <div class="block">
+        <P id="Output">
+
+        </P>
+    </div>
+</body>
+<footer>
+    <script src="Writer.js"></script>
+    <script src="ImprovedEular.js"></script>
+    <script src="Runner.js"></script>
+</footer>
+</html>
